@@ -1,0 +1,12 @@
+test:
+  rest:
+    service:
+      host: https://reqres.in/
+      endpoints:
+        get:
+          users: api/users/
+        post:
+          add-to-tracking: api/v1/add-replication-tracking/
+
+      schema:
+        users-list: jsonSchemas/user.json
