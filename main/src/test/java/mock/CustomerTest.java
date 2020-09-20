@@ -24,7 +24,7 @@ public class CustomerTest {
 
     // Creating a setup the mock for test case using @Before
     @Before
-    public void mockSetupForTest(){
+    public void mockSetupForTest() {
         customer =new Customer();
 
         //Create a list of customer items in an array using Mockito mock

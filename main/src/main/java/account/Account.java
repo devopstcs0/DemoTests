@@ -9,21 +9,19 @@ public class Account {
     }
 
     public Account() {
-        m_balance = 0;
+        m_balance = 0.0;
     }
 
     public double getBalance() {
         return m_balance;
     }
 
-    //Created a InsufficientFundsException class which extends Exception
-    public void Withdraw(double amount) throws InsufficientFundsException {
+    public void Withdraw(double amount) {
 
          if(m_balance >= amount) {
             m_balance -= amount;
         }else {
-             System.out.println("Withdrawal exceeds balance!");
-             throw new InsufficientFundsException(amount);
+             throw new IllegalArgumentException("Withdrawal exceeds balance!");
          }
     }
 
@@ -31,7 +29,7 @@ public class Account {
         Account ac = new Account(100);
         try {
             ac.Withdraw(100);
-        }catch(InsufficientFundsException e) {
+        }catch(IllegalArgumentException e) {
            System.out.println("Balance is :" +ac.getBalance() );
         }
     }
