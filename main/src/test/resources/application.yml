@@ -1,0 +1,12 @@
+test:
+  rest:
+    service:
+      host: https://reqres.in/
+      endpoints:
+        get:
+          users: api/users/
+        post:
+          users: api/users/
+
+      schema:
+        users-list: user.json

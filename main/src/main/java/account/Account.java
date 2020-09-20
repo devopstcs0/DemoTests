@@ -16,6 +16,7 @@ public class Account {
         return m_balance;
     }
 
+    //Created a InsufficientFundsException class which extends Exception
     public void Withdraw(double amount) throws InsufficientFundsException {
 
          if(m_balance >= amount) {
